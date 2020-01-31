@@ -8,6 +8,8 @@ This is a common platform to integrate various external service providers for Ba
 
 This repository contains different branches : "master" branch (which is just having middleware) , "bgconnector-template" branch which contains the basic structure to implement bgcheck connector and "bgconnector-checkr-sample" branch which is actual implementation of backgroundcheck connector using Checkr vendor.
 
+A detailed Connector Guidebook has been published under the "master" branch
+
 ## Getting Started
 
 This project is built using ASP.NET CORE, WEBAPI and serilog
