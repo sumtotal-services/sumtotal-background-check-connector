@@ -56,6 +56,7 @@ Vendor will return status of the candidate check to the connector service throug
   - Administration > Common Objects > Configuration > Connector Configuration
   - Click 'Add' to create a new  connector
   - Provide the required fields  such as Client secret and host URL etc.
+  - The connector code can be hosted anywhere
   - Select the OAuth client which were created in the above  OAuth Configuration steps.
   - Save
 
