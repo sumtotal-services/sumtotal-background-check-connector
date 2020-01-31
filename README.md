@@ -6,7 +6,7 @@
 
 This is a common platform to integrate various external service providers for Background Check service  into the SumTotal application.
 
-This repository contains different branchs as follows master branch which is just having middleware,bgconnector-template branch which contains the basic structure to implement bgcheck connector and bgconnector-checkr-sample branch which is actual implementation of backgroundcheck connector using checkr vendor.
+This repository contains different branches : "master" branch (which is just having middleware) , "bgconnector-template" branch which contains the basic structure to implement bgcheck connector and "bgconnector-checkr-sample" branch which is actual implementation of backgroundcheck connector using Checkr vendor.
 
 ## Getting Started
 
@@ -16,25 +16,20 @@ This solution provides basic template structure to integrate external providers 
 
 ## Functionality
 
-### BackgroundCheck Flow
+### BackgroundCheck Narrative Flow
 
-Stuart Bailey is a recruiter. he wants to start a background check to the candidate as a part of the recruiting process. For that Stuart Bailey needs to get the available background check packages in the SumTotal system.
+Stuart Bailey is a recruiter. He wants to start a background check on a candidate as a part of the recruiting process. Before Stuart can initiate the background check, a system administrator needs to set up the connector and synchronize the available background check packages from the vendor.
 
-To get the packages from a vendor, admin needs to configure the connector settings of required vendor and import all the packages from that vendor through connector sync packages. Those packages will be available in Checks Library page.
+Once synchronized, those packages will be available in the Checks Library. One or more of those packages will be assigned to the recruiting process and will be available for Stuart to initiate for a candidate when appropriate in the recruiting workflow. Stuart selects the package for the candidate, submits candidate details, and those details and the request is sent from the application, through the connector, to the background check vendor using B2B api callbacks.
 
-Now Stuart Bailey can add required packages from Checks Library to the recruiting process, then those checks will be available to assign to any candidate from the applicants list of selected requisition.
+Stuart can see the progress of the background check from the disposition candidate page, as well as the status of all checks related to a requisition on the Checks tab (under Check Tracking) of a requisition. Once a check is completed by the vendor, the basic results (Complete, Canceled, Expired, Failed, Started, Dispute or Suspended) is shared in the application. Stuart can also review the detailed results of the check included in the package directly in the vendor’s site.
 
-Stuart Bailey can assign check to required candidates by choosing required packages from the list, then the background check process will be initiated for those candidates. 
-
-Once the background check process is initiated, Stuart can track the process from Check tracking page.
-
-We will receive an order Id/applicant Id to track the status of the candidate check. through B2B call-backs. Stuart Bailey can able to track the status of that check process through check tracking page.
 
 ### Connector Service Flow
 
 There is a sync action to render packages from vendor through connector in Sumtotal connector configuration  page. when we click on sync action it will send a request from SumTotal application to connector service endpoint **(GetPackages)** and from there, connector will send request to the vendor and returns all the available packages.
 
-Once the recruiter assigns required package to the selected candidate,It will send an initiate check request to the connector service endpoint** (InitiateCheck) ** then it will create check order at vendor side and returns orderId.
+Once the recruiter assigns required package to the selected candidate,It will send an initiate check request to the connector service endpoint **(InitiateCheck)** then it will create check order at vendor side and returns orderId.
 
 Vendor will return status of the candidate check to the connector service through call back/webhook.Then that status will be return to sumtotal RestApi through  B2B call-back **(UpdateBackgroundCheck)** from connector.
 
