@@ -6,6 +6,8 @@
 
 This is a common platform to integrate various external service providers for Background Check service  into the SumTotal application.
 
+This repository contains different branchs as follows master branch which is just having middleware,bgconnector template branch which contains the basic structure to implement bgcheck connector and bgconnector-checkr-sample branch which is actual implementation of backgroundcheck connector using checkr vendor.
+
 ## Getting Started
 
 This project is built using ASP.NET CORE, WEBAPI and serilog
