@@ -71,7 +71,7 @@ This framework contains different projects for middleware,external servcie contr
 This is the branch just contains basic middleware framework of the connector project.
 ### bgconnector-template branch
 This is the base branch for custom type of background check, it includes all of master branch's stuff plus the custom background check contracts. Use this repo if you're building against a Vendor of type background check as this will get you up and running quicker.
-### bgconnector-sample branch
+### bgconnector-checkr-sample branch
 This is the checkr branch for custom type background check. This branch helps you understrand what a custom connector would look like and how it would work; in this case we have a working example of checkr against custom type background check.
 ### SumTotal.Template.Connector.Middleware
 
