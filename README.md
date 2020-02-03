@@ -45,7 +45,7 @@ When the check is completed, the vendor returns the status of the candidate chec
 ## SetUp Guide
 
 1. OAuth Configuration 
-    - Login in as an Admin
+  - Login in as an Admin
   - Click on Administration in the header menu.
   - Navigate to Common Objects > Configuration > OAuth Configuration
   - Click 'Add' to create a new OAuth Client
