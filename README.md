@@ -1,4 +1,6 @@
-![Sumtotal](https://plsadaptive.s3.amazonaws.com/gmedia/jpg/_i_a6a0bc8dba67fd7c5a4a86c08c49ff20_sumtotal_logo.jpg)
+<p align="center" width="100%">
+    <img src="https://marketplace.sumtotalsystems.com/content/images/vendor/SumTotal_logo.png"> 
+</p>
 
 # SumTotal External Provider Connector Service
 
